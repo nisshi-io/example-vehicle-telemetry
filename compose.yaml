@@ -21,12 +21,12 @@ services:
       - grafana:/var/lib/grafana
     pull_policy: missing
   broker:
-    image: ghcr.io/tansu-io/tansu:latest
+    image: ghcr.io/nisshi-io/solace-nisshi:0.8.1
     environment:
       ADVERTISED_LISTENER_URL: tcp://broker:9092
       RUST_BACKTRACE: 1
-      RUST_LOG: debug,tansu_sans_io=warn,tansu_model=warn,turso_core=warn
-      STORAGE_ENGINE: "sqlite:///data/tansu.db?vacuum_into=/data/snapshot.db&maintenance_interval=1m"
+      RUST_LOG: debug,nisshi_sans_io=warn,nisshi_model=warn,turso_core=warn
+      STORAGE_ENGINE: "sqlite:///data/nisshi.db?vacuum_into=/data/snapshot.db&maintenance_interval=1m"
       OTEL_METRIC_EXPORT_INTERVAL: 5000
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://prometheus:9090/api/v1/otlp/"
     command: ["broker"]

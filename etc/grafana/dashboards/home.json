@@ -229,7 +229,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_sqlite_produce_in_tx_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_sqlite_produce_in_tx_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -327,7 +327,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_sqlite_transaction_with_behavior_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_sqlite_transaction_with_behavior_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -425,7 +425,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_sqlite_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_sqlite_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -522,7 +522,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_sqlite_requests_total[$__rate_interval])",
+              "expr": "rate(nisshi_sqlite_requests_total[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "__auto",
@@ -620,7 +620,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_sqlite_engine_request_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_sqlite_engine_request_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -718,7 +718,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_sqlite_connect_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_sqlite_connect_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -816,7 +816,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_sqlite_delegate_request_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_sqlite_delegate_request_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -914,7 +914,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_sqlite_transaction_commit_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_sqlite_transaction_commit_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -1011,7 +1011,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_sqlite_error[$__rate_interval])",
+              "expr": "rate(nisshi_sqlite_error[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "__auto",
@@ -1123,7 +1123,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_storage_channel_permit_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_storage_channel_permit_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -1221,7 +1221,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.99, sum by(le) (rate(tansu_storage_channel_request_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.99, sum by(le) (rate(nisshi_storage_channel_request_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -1318,7 +1318,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_storage_channel_error[$__rate_interval])",
+              "expr": "rate(nisshi_storage_channel_error[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "__auto",
@@ -1415,7 +1415,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "tansu_storage_channel_capacity",
+              "expr": "nisshi_storage_channel_capacity",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "__auto",
@@ -2595,7 +2595,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(send_pending_batch_total{job=\"tansu-proxy\"}[$__rate_interval])",
+              "expr": "rate(send_pending_batch_total{job=\"nisshi-proxy\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "__auto",
@@ -2691,7 +2691,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(send_pending_found_owner_total{job=\"tansu-proxy\"}[$__rate_interval])",
+              "expr": "rate(send_pending_found_owner_total{job=\"nisshi-proxy\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "__auto",
@@ -2787,7 +2787,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(send_pending_produce_duration_milliseconds_bucket{job=\"tansu-proxy\"}[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(send_pending_produce_duration_milliseconds_bucket{job=\"nisshi-proxy\"}[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -4063,7 +4063,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(produce_duration_milliseconds_bucket{job=\"tansu-generator\"}[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(produce_duration_milliseconds_bucket{job=\"nisshi-generator\"}[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -4159,7 +4159,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(tcp_receive_duration_milliseconds_bucket{job=\"tansu-generator\"}[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(tcp_receive_duration_milliseconds_bucket{job=\"nisshi-generator\"}[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -4255,7 +4255,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(tcp_connect_duration_milliseconds_bucket{job=\"tansu-generator\"}[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(tcp_connect_duration_milliseconds_bucket{job=\"nisshi-generator\"}[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -4351,7 +4351,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "sum(rate(produce_record_count_total{job=\"tansu-generator\"}[$__rate_interval]))",
+              "expr": "sum(rate(produce_record_count_total{job=\"nisshi-generator\"}[$__rate_interval]))",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "__auto",
@@ -4447,7 +4447,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(tcp_send_duration_milliseconds_bucket{job=\"tansu-generator\"}[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(tcp_send_duration_milliseconds_bucket{job=\"nisshi-generator\"}[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -4639,7 +4639,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tcp_bytes_sent_total{job=\"tansu-generator\"}[$__rate_interval])",
+              "expr": "rate(tcp_bytes_sent_total{job=\"nisshi-generator\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "__auto",
@@ -4849,7 +4849,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_api_requests_total[$__rate_interval])",
+              "expr": "rate(nisshi_api_requests_total[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "instant": false,
@@ -4950,7 +4950,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(tansu_request_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(nisshi_request_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "instant": false,
@@ -5012,7 +5012,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "tansu_api_requests_total",
+              "expr": "nisshi_api_requests_total",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "{{api_name}}",
@@ -5108,7 +5108,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_group_coordinator_requests_total[$__rate_interval])",
+              "expr": "rate(nisshi_group_coordinator_requests_total[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "{{method}}",
@@ -5204,7 +5204,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_storage_container_requests_total[$__rate_interval])",
+              "expr": "rate(nisshi_storage_container_requests_total[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "{{method}}",
@@ -5265,7 +5265,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "tansu_storage_container_requests_total",
+              "expr": "nisshi_storage_container_requests_total",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "{{method}}",
@@ -5375,7 +5375,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(tansu_sql_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(nisshi_sql_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "__auto",
@@ -5471,7 +5471,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_sql_duration_milliseconds_count[$__rate_interval])",
+              "expr": "rate(nisshi_sql_duration_milliseconds_count[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "{{sql}}",
@@ -5546,7 +5546,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "tansu_object_store_request_duration_milliseconds_count",
+              "expr": "nisshi_object_store_request_duration_milliseconds_count",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "{{method}}",
@@ -5646,7 +5646,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(tansu_object_store_request_duration_milliseconds_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(nisshi_object_store_request_duration_milliseconds_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "instant": false,
@@ -5743,7 +5743,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_objectstore_cache_entries_total[$__rate_interval])",
+              "expr": "rate(nisshi_objectstore_cache_entries_total[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "{{method}}/{{outcome}}",
@@ -5839,7 +5839,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_objectstore_cache_outcomes_total{method=\"get_opts\"}[$__rate_interval])",
+              "expr": "rate(nisshi_objectstore_cache_outcomes_total{method=\"get_opts\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "legendFormat": "{{outcome}}",
@@ -5935,7 +5935,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_object_store_request_duration_milliseconds_count[$__rate_interval])",
+              "expr": "rate(nisshi_object_store_request_duration_milliseconds_count[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "{{method}}",
@@ -6035,7 +6035,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_object_store_request_error_total{method=\"get_opts\"}[$__rate_interval])",
+              "expr": "rate(nisshi_object_store_request_error_total{method=\"get_opts\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": true,
               "instant": false,
@@ -6051,7 +6051,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_object_store_request_error_total{method=\"put_opts\"}[$__rate_interval])",
+              "expr": "rate(nisshi_object_store_request_error_total{method=\"put_opts\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "hide": false,
               "includeNullMetadata": false,
@@ -6149,7 +6149,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_opticon_requests_total[$__rate_interval])",
+              "expr": "rate(nisshi_opticon_requests_total[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "{{method}}",
@@ -6245,7 +6245,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_opticon_errors_total{method=\"with\"}[$__rate_interval])",
+              "expr": "rate(nisshi_opticon_errors_total{method=\"with\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "with/{{error}}",
@@ -6260,7 +6260,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_opticon_errors_total{method=\"with_mut\"}[$__rate_interval])",
+              "expr": "rate(nisshi_opticon_errors_total{method=\"with_mut\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "hide": false,
               "includeNullMetadata": true,
@@ -6358,7 +6358,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_objectstore_cache_requests_total[$__rate_interval])",
+              "expr": "rate(nisshi_objectstore_cache_requests_total[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "{{method}}",
@@ -6454,7 +6454,7 @@
             {
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_objectstore_cache_errors_total{method=\"put_opts\"}[$__rate_interval])",
+              "expr": "rate(nisshi_objectstore_cache_errors_total{method=\"put_opts\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "legendFormat": "put_opts/{{error}}",
@@ -6469,7 +6469,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "rate(tansu_objectstore_cache_errors_total{method=\"get_opts\"}[$__rate_interval])",
+              "expr": "rate(nisshi_objectstore_cache_errors_total{method=\"get_opts\"}[$__rate_interval])",
               "fullMetaSearch": false,
               "hide": false,
               "includeNullMetadata": false,
@@ -6585,7 +6585,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(tansu_request_size_bytes_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(nisshi_request_size_bytes_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "instant": false,
@@ -6686,7 +6686,7 @@
               },
               "disableTextWrap": false,
               "editorMode": "builder",
-              "expr": "histogram_quantile(0.95, sum by(le) (rate(tansu_response_size_bytes_bucket[$__rate_interval])))",
+              "expr": "histogram_quantile(0.95, sum by(le) (rate(nisshi_response_size_bytes_bucket[$__rate_interval])))",
               "fullMetaSearch": false,
               "includeNullMetadata": false,
               "instant": false,
@@ -6717,7 +6717,7 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Tansu",
+  "title": "Nisshi",
   "uid": "ef0ih7zz36br4a",
   "version": 1,
   "weekStart": ""

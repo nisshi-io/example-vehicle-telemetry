@@ -1,6 +1,6 @@
 # Vehicle Telemetry Example
 
-A demo that simulates a fleet of UK vehicles sending GPS telemetry to a [Tansu](https://github.com/tansu-io/tansu) broker. Each vehicle is identified by its Vehicle Registration Mark (VRM) and periodically produces a JSON location update to a Kafka-compatible topic.
+A demo that simulates a fleet of UK vehicles sending GPS telemetry to a [Nisshi](https://github.com/nisshi-io/solace-nisshi) broker. Each vehicle is identified by its Vehicle Registration Mark (VRM) and periodically produces a JSON location update to a Kafka-compatible topic.
 
 ## Prerequisites
 
@@ -41,11 +41,11 @@ The simulator starts vehicles staggered across the first interval to avoid a bur
 
 | Service | URL | Description |
 |---|---|---|
-| Tansu broker | `tcp://localhost:9092` | Kafka-compatible broker backed by SQLite |
+| Nisshi broker | `tcp://localhost:9092` | Kafka-compatible broker backed by SQLite |
 | Prometheus | <http://localhost:9090> | Receives OTLP metrics from the broker |
 | Grafana | <http://localhost:3000> | Pre-provisioned dashboard (anonymous admin) |
 
-Broker data is persisted to `./data/tansu.db`. Run `just clean` to remove it along with build artefacts.
+Broker data is persisted to `./data/nisshi.db`. Run `just clean` to remove it along with build artefacts.
 
 ## Usage reference
 

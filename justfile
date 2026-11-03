@@ -1,6 +1,6 @@
 set dotenv-load := true
 
-up: clean-tansu-db docker-compose-up telemetry-topic-create
+up: clean-nisshi-db docker-compose-up telemetry-topic-create
 
 down: docker-compose-down
 
@@ -19,14 +19,14 @@ docker-compose-ps:
 docker-compose-logs *args:
     docker compose logs {{ args }}
 
-clean: clean-tansu-db
+clean: clean-nisshi-db
     cargo clean
 
 [private]
 topic-create topic *args:
-    docker compose exec broker /tansu topic create {{ topic }} {{ args }}
+    docker compose exec broker /nisshi topic create {{ topic }} {{ args }}
 
-telemetry-topic-create: (topic-create "telemetry" "--config" "cleanup.policy=compact" "--config" "tansu.virtual=true")
+telemetry-topic-create: (topic-create "telemetry" "--config" "cleanup.policy=compact" "--config" "nisshi.virtual=true")
 
 plate-generator count="400000" profile="dev":
     target/{{ replace(profile, "dev", "debug") }}/plate_generator --count {{ count }}
@@ -34,7 +34,7 @@ plate-generator count="400000" profile="dev":
 create-topics profile="dev":
     target/{{ replace(profile, "dev", "debug") }}/create_topics
 
-vehicle-simulator duration="10m" interval="1m" broker="tcp://localhost:9092" profile="dev": build
+vehicle-simulator duration="10m" interval="1m" broker="tcp://127.0.0.1:9092" profile="dev": build
     target/{{ replace(profile, "dev", "debug") }}/vehicle_simulator --duration {{ duration }} --interval {{ interval }} --broker {{ broker }} | tee simulator.log
 
 grafana-ui:
@@ -49,7 +49,7 @@ build:
 logs:
     docker compose logs --no-log-prefix --no-color broker > broker.log
 
-clean-tansu-db:
+clean-nisshi-db:
     rm -f data/*.db*
 
 prune:

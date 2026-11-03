@@ -49,8 +49,8 @@ use std::{
     sync::{Arc, LazyLock, Mutex},
     time::{Duration, SystemTime, UNIX_EPOCH},
 };
-use tansu_client::{Client, ConnectionManager};
-use tansu_sans_io::{
+use nisshi_client::{Client, ConnectionManager};
+use nisshi_sans_io::{
     ErrorCode,
     produce_request::{PartitionProduceData, ProduceRequest, TopicProduceData},
     record::{Record, deflated, inflated},
@@ -387,7 +387,7 @@ impl MetricExporter {
     #[instrument(skip_all, fields(scope = scope.name(), metric = metric.name()))]
     fn info(&self, scope: &InstrumentationScope, metric: &Metric, info: &mut Info) {
         match (scope.name(), metric.name(), metric.data()) {
-            ("tansu-client", "tcp_bytes_sent", AggregatedMetrics::U64(MetricData::Sum(sum))) => {
+            ("nisshi-client", "tcp_bytes_sent", AggregatedMetrics::U64(MetricData::Sum(sum))) => {
                 for (point, data) in sum.data_points().enumerate() {
                     debug!(point, value = ?data.value());
                 }

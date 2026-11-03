@@ -15,8 +15,8 @@
 use anyhow::{Context, Result};
 use clap::Parser;
 use std::{fs::File, io::BufReader, path::PathBuf};
-use tansu_client::{Client, ConnectionManager};
-use tansu_sans_io::create_topics_request::{CreatableTopic, CreateTopicsRequest};
+use nisshi_client::{Client, ConnectionManager};
+use nisshi_sans_io::create_topics_request::{CreatableTopic, CreateTopicsRequest};
 use url::Url;
 
 #[derive(Parser)]
