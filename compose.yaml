@@ -21,7 +21,8 @@ services:
       - grafana:/var/lib/grafana
     pull_policy: missing
   broker:
-    image: ghcr.io/nisshi-io/solace-nisshi:0.8.1
+    image: ghcr.io/nisshi-io/solace-nisshi:latest
+    pull_policy: always
     environment:
       ADVERTISED_LISTENER_URL: tcp://broker:9092
       RUST_BACKTRACE: 1
